@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>TTS</title>
+    <script src="aframe-v1.2.0.min.js"></script>
+    <script src="aframe-tts-component.js"></script>    
+  </head>
+  <body>
+    <!-- a scene with a sphere, a box, a cylinder, a plane, and a sky  -->
+    <a-scene>
+      <a-assets timeout="8000">
+        <img id="zizek_texture" alt="zizek texture" src="zizek.png" preload="auto">
+      </a-assets>
+
+      <a-sphere data-raycastable tts="text: do you" position="0 1.25 -1" radius="1.25" color="#D2D2D2"></a-sphere>
+      <a-box data-raycastable tts="text: what" position="-1 0.5 1" rotation="0 45 0" width="1" height="1" depth="1" color="#4C4C4C"></a-box>
+      <a-cylinder data-raycastable tts="text: vr" position="1 0.75 1" radius="0.5" height="1.5" color="#878787"></a-cylinder>
+      <a-plane data-raycastable tts="text: think about" rotation="-90 0 0" width="4" height="4" src="vr.jpg"></a-plane>
+      <a-entity position="0.1 2.5 1" text="align: center; width: 6; value: click on the items;"></a-entity>
+      <a-sky id="zizek_sky"
+      segments-height="40" segments-width="128" src="#zizek_texture" color="#FFFFFF">
+      </a-sky>
+      <a-entity position="0 0 3.8">
+        <a-camera><a-cursor raycaster="objects: [data-raycastable]"></a-cursor></a-camera>
+      </a-entity>
+    </a-scene>
+  </body>
+</html>
