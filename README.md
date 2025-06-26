@@ -2,6 +2,8 @@
 
 WORK IN PROGRESS
 
+Test repo for Claude Code
+
 Example, demonstrating TTS in [A-Frame](https://aframe.io/). Live at https://i3games.github.io/aframe-tts/.
 
 Klick on the objects. 
